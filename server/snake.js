@@ -1,7 +1,7 @@
 class Snake {
-  constructor(username, snakeParts, dx, dy, id, color, score) {
+  constructor(username, snake, dx, dy, id, color, score) {
     this.username = username;
-    this.snakeParts = snakeParts;
+    this.snake = snake;
     this.dx = dx;
     this.dy = dy;
     this.id = id;
@@ -10,10 +10,10 @@ class Snake {
   }
 
   moveSnake(dx = this.dx, dy = this.dy) {
-    let head = { x: this.snakeParts[0].x + dx, y: this.snakeParts[0].y + dy }
+    let head = { x: this.snake[0].x + dx, y: this.snake[0].y + dy }
 
-    this.snakeParts.forEach(snakePart => {
-      if (head.x === snakePart.x && head.y === snakePart.y) {
+    this.snake.forEach(snake => {
+      if (head.x === snake.x && head.y === snake.y) {
         this.snakeParts = [
           { x: 180, y: 200 },
           { x: 160, y: 200 },
@@ -22,12 +22,12 @@ class Snake {
         this.dx = 20;
         this.dy = 0;
         this.score = 0;
-        head = { x: this.snakeParts[0].x + dx, y: this.snakeParts[0].y + dy }
+        head = { x: this.snake[0].x + dx, y: this.snake[0].y + dy }
       }
     });
 
-    this.snakeParts.unshift(head);
-    this.snakeParts.pop();
+    this.snake.unshift(head);
+    this.snake.pop();
 
     if (head.x === 400) {
       head.x = 0;
@@ -41,7 +41,7 @@ class Snake {
   }
 
   getSnakeParts() {
-    return this.snakeParts;
+    return this.snake;
   }
 
   get dx_dy() {
