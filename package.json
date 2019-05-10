@@ -1,0 +1,26 @@
+{
+  "name": "snake-multiplayer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "cd server && node app.js",
+    "dev": "cd server && nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariusailisoaie/snake-multiplayer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariusailisoaie/snake-multiplayer/issues"
+  },
+  "homepage": "https://github.com/mariusailisoaie/snake-multiplayer#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "heroku": "^7.24.3",
+    "socket.io": "^2.2.0"
+  }
+}
