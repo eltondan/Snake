@@ -1,11 +1,11 @@
 const canvasBackgroundColor = '#e6f6ff';
-const borderColor = '#000';
-const foodColor = '#513814';
-const snakeColor = '#006442';
-const headColor = '#00ab71';
-const playerList = document.getElementById('player-list');
+const border = '#000';
+const food = '#513814';
+const snake = '#006442';
+const head = '#00ab71';
+const players = document.getElementById('player-list');
 const score = document.getElementById('score');
-const playBtn = document.getElementById('play-btn');
+const play = document.getElementById('play-btn');
 const username = document.getElementById('username');
 let snakeDirectionX = null, snakeDirectionY = null;
 
